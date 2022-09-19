@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-type Clock struct{
-	Format string
+type Clock struct {
+	Format   string
 	Duration time.Duration
 }
 
@@ -24,6 +24,9 @@ func (b Clock) Run(i int, c chan i3b.BlockUpdate) {
 	tick := time.Tick(b.Duration)
 	var o i3b.BlockObj
 	u := i3b.BlockUpdate{I: i, B: &o}
+
+	o.FullText = time.Now().Format(b.Format)
+	c <- u
 	for {
 		select {
 		case <-tick:
