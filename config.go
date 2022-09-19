@@ -6,5 +6,5 @@ import (
 )
 
 var Blocks = []i3b.Block{
-	block.Clock{},
+	block.Clock{Format: "2006-01-02(Mon) 15:04"},
 }
