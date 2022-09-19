@@ -1,8 +1,8 @@
 package i3blocks
 
 type Preamble struct {
-	Version     string `json:"version"`
-	ClickEvents bool   `json:"click_events"`
+	Version     int  `json:"version"`
+	ClickEvents bool `json:"click_events"`
 }
 
 type BlockObj struct {

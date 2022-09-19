@@ -9,8 +9,7 @@ import (
 )
 
 var (
-	preamblev = i3b.Preamble{Version: "1", ClickEvents: true}
-
+	preamblev = i3b.Preamble{Version: 1, ClickEvents: true}
 )
 
 func rcv(c chan i3b.BlockUpdate) {
